@@ -5,9 +5,11 @@ def call() {
         }
         stages {
 
-            stage('compile') {
+            stage('compile/build') {
                 steps {
-                    echo 'compile'
+                    script{
+                        common.compile
+                    }
                 }
             }
             stage('unit test') {
