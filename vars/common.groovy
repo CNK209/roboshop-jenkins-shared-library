@@ -6,6 +6,9 @@ def compile() {
     if (app_lang == "maven") {
         sh 'mvn package'
     }
+    if (app_lang == "golang"){
+        sh 'golang'
+    }
 }
 
 
