@@ -16,6 +16,9 @@ def unittests(){
        // sh 'npm test'
         sh 'echo Test Cases'
     }
+    if (app_lang == "maven") {
+        sh 'mvn test'
+    }
 
 }
 
